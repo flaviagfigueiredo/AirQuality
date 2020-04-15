@@ -1,0 +1,101 @@
+<!doctype html>
+<html dir="ltr" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
+    <script src="https://kit.fontawesome.com/9002efc044.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+        body {
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+        h5
+        {
+            margin:15px;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Page Content -->
+<div id="viewport">
+    <!-- Sidebar -->
+    <div class="row">
+        <div class="col-3" id="sidebar">
+            <div class="list-group">
+                <h5> PORTUGAL </h5>
+                <a href="/" class="list-group-item">
+                    <span class="hidden-sm-down">Lisboa</span>
+                </a>
+                <a href="/braga" class="list-group-item">
+                    <span class="hidden-sm-down">Braga</span>
+                </a>
+                <a href="/faro" class="list-group-item">
+                    <span class="hidden-sm-down">Faro</span>
+                </a>
+                <h5> FRANÇA </h5>
+                <a href="/paris" class="list-group-item">
+                    <span class="hidden-sm-down">Paris</span>
+                </a>
+                <h5> ESPANHA </h5>
+                <a href="/madrid" class="list-group-item">
+                    <span class="hidden-sm-down">Madrid</span>
+                </a>
+                <a href="/barcelona" class="list-group-item">
+                    <span class="hidden-sm-down">Barcelona</span>
+                </a>
+            </div>
+        </div>
+    <!-- Content -->
+    <div id="content col-9">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row" style="font-size: 18px;">
+                <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Station: <span th:text="${station.getName()}"></span></h3>
+                            <p class="card-text">
+                            <ul>
+                                <li><b>AQI: </b><span th:text="${station.getAqi()}">a</span></li>
+                                <li><b>PM25: </b><span th:text="${station.getPm25()}">a</span></li>
+                                <li><b>PM10: </b><span th:text="${station.getPm10()}">a</span></li>
+                                <li><b>O3: </b><span th:text="${station.getO3()}">a</span></li>
+                                <li><b>No2: </b><span th:text="${station.getNo2()}">a</span></li>
+                                <li><b>SO2: </b><span th:text="${station.getSo2()}">a</span></li>
+                                <li><b>Temperature: </b><span th:text="${station.getTemperature()}">a</span></li>
+                                <li><b>Pressure: </b><span th:text="${station.getPressure()}">a</span></li>
+                                <li><b>Humidity: </b><span th:text="${station.getHumidity()}">a</span></li>
+                                <li><b><i>Measure timestamp: </i></b><span th:text="${station.getTimestamp()}">a</span></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+    <!-- Content Row -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
